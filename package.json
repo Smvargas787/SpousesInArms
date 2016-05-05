@@ -1,0 +1,29 @@
+{
+  "name": "smsproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-shell": "^0.5.2"
+  },
+  "devDependencies": {
+    "express": "^4.13.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smvargas787/SpousesInArms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smvargas787/SpousesInArms/issues"
+  },
+  "homepage": "https://github.com/Smvargas787/SpousesInArms#readme"
+}
