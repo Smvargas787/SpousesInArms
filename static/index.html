@@ -1,12 +1,14 @@
 <!DOCTYPE HTML>
 <html ng-app="siaApp" >
   <head>
+    <base href="/"/>
     <script src="bower/angular/angular.js"></script>
+    <script src="bower/angular-route/angular-route.js"></script>
     <script src="bower/firebase/firebase.js"></script>
     <script src="bower/angularfire/dist/angularfire.js"></script>
-    <script type='text/javascript' src="js/app.js"></script>
     <script type='text/javascript' src="js/module.js"></script>
-    <script type='text/javascript' src="js/controller/MainController.js"></script>
+    <script type='text/javascript' src="js/routes.js"></script>
+    <script type='text/javascript' src="js/controllers/MainController.js"></script>
 
     <!-- <link rel="stylesheet" href="/resources/tutorial/css/example.css"/> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -14,17 +16,13 @@
     <title>SpousesInArms</title>
   </head>
 
-  <body ng-controller="MyController">
+  <body>
     <section>
 
       <h1>Spouses In Arms</h1>
-
-      <!-- <form ng-submit="accessClient()">
-        <label class="name">
-               <input type="authData" placeholder="Kevin Hart" ng-model='employee.name'>
-           </label> -->
-        <button ng-click="GoogleSignIn()">Sign In Via Google</button>
-      </form>
+        <!-- Nav here -->
+        <ng-view></ng-view>
+        <!-- FOOTER here -->
 
     </section>
     <!-- <ul id="example-messages" class="example-chat-messages">

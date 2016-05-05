@@ -1,21 +1,17 @@
-siaApp.controller("MainController", ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
+siaApp.controller("MainController", ["$scope", "$firebaseArray", "$firebaseAuth", "$location", function($scope, $firebaseArray, $firebaseAuth, $location) {
 
     //CREATE A FIREBASE REFERENCE
   var ref = new Firebase("https://spouesinarms.firebaseio.com/");
-
-
-  // GET MESSAGES AS AN ARRAY
-  $scope.messages = $firebaseArray(ref);
+  $scope.authObj = $firebaseAuth(ref);
 
   //Add Client to Google Sign In Auth
   $scope.GoogleSignIn = function() {
-    ref.authWithOAuthPopup("google", function(error, authData) {
-        if (error) {
-          console.log("Login Failed!", error);
-        } else {
-          console.log("Authenticated successfully with payload:", authData);
-        }
-      });
+    $scope.authObj.$authWithOAuthPopup("google").then(function(authData) {
+      console.log("Logged in as:", authData.uid);
+      $location.path('/dashboard')
+    }).catch(function(error) {
+      console.error("Authentication failed:", error);
+    });
   }
 
 

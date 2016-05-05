@@ -1,1 +1,1 @@
-var siaApp = angular.module("siaApp", ["firebase"]);
+var siaApp = angular.module("siaApp", ["ngRoute", "firebase"]);
