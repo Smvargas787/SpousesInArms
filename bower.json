@@ -1,0 +1,20 @@
+{
+  "name": "smsproject",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "smvargas787 <smvargas@fullsail.edu>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Smvargas787/SpousesInArms",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularfire": "^1.2.0"
+  }
+}

@@ -1,6 +1,4 @@
-var siaApp = angular.module("siaApp", ["firebase"]);
-
-siaApp.controller("MyController", function($scope, $firebaseArray) {
+siaApp.controller("MainController", ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
 
     //CREATE A FIREBASE REFERENCE
   var ref = new Firebase("https://spouesinarms.firebaseio.com/");
@@ -21,4 +19,4 @@ siaApp.controller("MyController", function($scope, $firebaseArray) {
   }
 
 
-});
+}]);
