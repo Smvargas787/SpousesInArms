@@ -1,6 +1,6 @@
 {
   "firebase": "spouesinarms",
-  "public": "spousesinarms",
+  "public": "smsproject",
   "ignore": [
     "firebase.json",
     "**/.*",
