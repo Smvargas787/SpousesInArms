@@ -1,6 +1,6 @@
 {
   "firebase": "spouesinarms",
-  "public": "smsproject",
+  "public": "static",
   "ignore": [
     "firebase.json",
     "**/.*",

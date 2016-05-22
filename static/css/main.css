@@ -1,6 +1,67 @@
 /*Body*/
-body{
-    background-color: #808080;
-    color: #8b0000;
 
+@font-face {
+  font-family: 'MilitaryFont';
+  src: url('camouflage/CamouflageS.ttf');
+  src: url('black-ops-one/BlackOpsOne-Regular.ttf');
+}
+
+body {
+    background-color: #3A3C3C;
+    font-family:'MilitaryFont',BlackOpsOne-Regular;
+    color: #edc9af;
+    max-width: 1400px;
+    letter-spacing: 1px;
+}
+
+section {
+  margin: 0 auto;
+  margin-left: 500px;
+  margin-top: 170px;
+  margin-bottom: 150px;
+}
+
+/*Headings*/
+h1{
+  font-size: 24px;
+  margin-left: -14px;
+  /*margin-left: -80px;*/
+}
+
+h2{
+  font-size: 18px;
+  margin-left: -60px;
+}
+
+
+
+p{
+  /*font-size: 18px;*/
+  /*margin-left: -120px;*/
+}
+
+/*Google Sign In*/
+.google-btn {
+  background-size: 30px,cover;
+  background-repeat: no-repeat;
+  background-image: url(http://dl.dropbox.com/u/109135764/gplus.png), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #d34836), color-stop(100%, #d34836));
+  width: 190px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  white-space: nowrap;
+  height: 29px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: arial;
+}
+
+/*Footer*/
+.footerp1, .footerp2{
+  font-size: 18px;
+}
+
+.SignIn, .footerp2{
+  margin-left: 140px;
 }

@@ -9,4 +9,8 @@ siaApp.config(function($locationProvider, $routeProvider){
     templateUrl: 'templates/dashboard.html',
     controller: 'DashController'
   })
-})
+  .when('/details', {
+    templateUrl: 'templates/details.html',
+    controller: 'DetailsController'
+  });
+});

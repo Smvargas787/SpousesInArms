@@ -1,0 +1,16 @@
+<h1>US Armed Tracked</h1>
+
+<ul>
+  <li ng-repeat="US Armed in armedArray track by $index">
+    {{US.fn}} {{US.ln}} {{US.dob}} {{home.Address}}
+    {{US.social}} {{service.Number}} {{US.grade}}
+    {{US.rank}} {{Spouse.fn}} {{Spouse.ln}}
+
+    <p>
+      <a href="#/details/{{$index}}">
+        {{US.fn}} {{US.ln}}
+      </a>
+    </p>
+    <button ng-click="removeUSarmed($index)">Delete</button>
+  </li>
+</ul>

@@ -8,11 +8,11 @@ siaApp.controller("MainController", function($scope, $firebaseArray, $firebaseAu
   $scope.GoogleSignIn = function() {
     $scope.authObj.$authWithOAuthPopup("google").then(function(authData) {
       console.log("Logged in as:", authData.uid);
-      $location.path('/dashboard')
+      $location.path('/dashboard');
     }).catch(function(error) {
       console.error("Authentication failed:", error);
     });
-  }
+  };
 
 
 });
