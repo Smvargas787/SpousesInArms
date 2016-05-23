@@ -10,7 +10,7 @@ siaApp.controller('DetailsController', ["$scope", "$firebaseObject", "$firebaseA
       var spouseRef = new Firebase("https://spouesinarms.firebaseio.com/users/" + authData.uid + "/spouse");
       spouseData = $firebaseObject(spouseRef);
       $scope.spouse = spouseData;
-      console.log("Firebase data ", $scope.spouse)
+      console.log("Firebase data ", $scope.spouse);
     } else {
       // if the user isn't logged in it kickes them to the route in path
       $location.path('/');
