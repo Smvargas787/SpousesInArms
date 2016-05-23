@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <base href="/"/>
+    <script src="bower/angular/angular.js"></script>
+    <script src="bower/angular-route/angular-route.js"></script>
+    <script src="bower/firebase/firebase.js"></script>
+    <script src="bower/angularfire/dist/angularfire.js"></script>
+    <script type='text/javascript' src="js/module.js"></script>
+    <script type='text/javascript' src="js/routes.js"></script>
+    <script type='text/javascript' src="js/controllers/MainController.js"></script>
+    <script type='text/javascript' src="js/controllers/DashController.js"></script>
+    <script type='text/javascript' src="js/controllers/DetailsController.js"></script>
+    <script type='text/javascript' src="js/controllers/TrackController.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bower/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+    <title>SpousesInArms</title>
+  </head>
+
+  <body>
+        <!-- Nav here -->
+
+        <section>
+          <h1>Spouses In Arms</h1>
+          <p>Sacrifice Isn't Alone</p>
+
+            <button class="google-btn">Sign In <em>w/</em> Google</button>
+
+
+            <!-- FOOTER here -->
+          <footer>
+              <h2 class="JoinUs">Join Us</h2>
+              <p class="footerp1">
+              Create An Account
+              </p>
+
+
+              <h2 class="SignIn">Sign In</h2>
+              <p class="footerp2"> Existing SIA Account </p>
+
+          </footer>
+        </section>
+
+
+          <h1>Register Your Spouse</h1>
+          <form ng-submit="addSpouse()" class="col-md-8 col-md-offset-2">
+
+            <div class="form-group">
+              <label for="spouse-US-fn" >Us Armed First Name: </label>
+              <input id="spouse-US-fn" type="text" class="form-control" ng-model="spouse.firstName" placeholder="Roberto">
+            </div>
+
+            <div class="form-group">
+            <label>Us Armed Last Name:  </label>
+              <input type="text" class="form-control" ng-model="spouse.lastName" placeholder="Vargas">
+            </div>
+
+            <div class="form-group">
+              <label>Us Armed D.O.B:  </label>
+              <input type="text" class="form-control" ng-model="spouse.dob" placeholder="5/24/1979">
+            </div>
+
+            <div class="form-group">
+              <label>Home Address:</label>
+              <input type="text" class="form-control" ng-model="spouse.address" placeholder="2230 Louise Lane, Louiville, Kentucky,
+              42385">
+            </div>
+
+            <label>U.S Armed Social Security
+              <input type="tel" ng-model="spouse.social" placeholder="797-55-4593">
+            </label>
+
+            <label>Military I.D Service Number:
+              <input type="text" ng-model="spouse.serviceNumber" placeholder="Af50593">
+            </label>
+
+            <label>Us Armed Grade:
+              <input type="text" ng-model="spouse.grade" placeholder="Sgt">
+            </label>
+
+            <label>Us Armed Rank:
+              <input type="text" ng-model="spouse.rank" placeholder="Sgt First Class">
+            </label>
+
+            <button class="btn btn-default" type="submit">Register</button>
+          </form>
+          <h1>Your Spouse</h1>
+
+          <!-- <pre> {{ spouse | json }} </pre> -->
+
+          <p> First Name: {{spouse.firstName }}</p>
+          <p> Last Name: {{spouse.lastName }}</p>
+          <p> Date of Birth: {{spouse.dob }}</p>
+          <p> Grade: {{spouse.grade }}</p>
+          <p> Rank: {{spouse.rank }}</p>
+          <p> Service Number: {{spouse.serviceNumber }}</p>
+
+
+          <!-- <p>First Name:{{US.fn}}</p>
+          <p>Last Name:{{US.ln}}</p>
+          <p>D.O.B:{{US.dob}}</p>
+          <p>Home Address:{{home.Address}}</p>
+          <p>Social Security:{{US.social}}</p>
+          <p>Service Number:{{service.Number}}</p>
+          <p>Grade: {{US.grade}}</p>
+          <p>Rank: {{US.rank}}</p>
+          <p>Spouse First Name:{{Spouse.fn}}</p>
+          <p>Spouse Last Name:{{Spouse.ln}}</p> -->
+
+
+          <h1>US Armed Tracked</h1>
+
+          <ul>
+            <li "US Armed in armedArray track by $index">
+              {{US.fn}} {{US.ln}} {{US.dob}} {{home.Address}}
+              {{US.social}} {{service.Number}} {{US.grade}}
+              {{US.rank}} {{Spouse.fn}} {{Spouse.ln}}
+
+              <p>
+                <a href="#/details/{{$index}}">
+                  {{US.fn}} {{US.ln}}
+                </a>
+              </p>
+              <button "removeUSarmed($index)">Delete</button>
+            </li>
+          </ul>
+
+  </body>
+</html>
