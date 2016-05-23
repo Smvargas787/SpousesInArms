@@ -5,10 +5,12 @@
 <p> First Name: {{spouse.firstName }}</p>
 <p> Last Name: {{spouse.lastName }}</p>
 <p> Date of Birth: {{spouse.dob }}</p>
+<p> Home Address: {{spouse.addres}}</p>
 <p> Grade: {{spouse.grade }}</p>
 <p> Rank: {{spouse.rank }}</p>
 <p> Service Number: {{spouse.serviceNumber }}</p>
 
+<button ng-click="removeSpouse($index)">Delete</button>
 
 <!-- <p>First Name:{{US.fn}}</p>
 <p>Last Name:{{US.ln}}</p>

@@ -2,15 +2,15 @@
 
 <ul>
   <li ng-repeat="US Armed in armedArray track by $index">
-    {{US.fn}} {{US.ln}} {{US.dob}} {{home.Address}}
-    {{US.social}} {{service.Number}} {{US.grade}}
-    {{US.rank}} {{Spouse.fn}} {{Spouse.ln}}
+    {{spouse.firstNAme}} {{spouse.lastName}} {{spouse.dob}} {{spouse.address}}
+    {{service.Number}} {{spouse.grade}}
+    {{spouse.rank}}
 
     <p>
       <a href="#/details/{{$index}}">
-        {{US.fn}} {{US.ln}}
+        {{spouse.firstName}} {{spouse.lastName}}
       </a>
     </p>
-    <button ng-click="removeUSarmed($index)">Delete</button>
+    <button ng-click="removeSpouse($index)">Delete</button>
   </li>
 </ul>

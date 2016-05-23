@@ -1,4 +1,4 @@
-siaApp.controller('DetailsController', ["$scope", "$firebaseObject", "$firebaseAuth", function($scope, $firebaseObject, $firebaseAuth){
+siaApp.controller('DetailsController', ["$scope", "$firebaseObject", "$firebaseAuth", "$location", function($scope, $firebaseObject, $firebaseAuth, $location){
   var ref = new Firebase("https://spouesinarms.firebaseio.com/");
   $scope.authObj = $firebaseAuth(ref);
 
@@ -17,4 +17,15 @@ siaApp.controller('DetailsController', ["$scope", "$firebaseObject", "$firebaseA
       console.log("Logged out");
     }
   });
+
+  //Deleting Registered Spouse
+  $scope.removeSpouse = function() {
+    spouseData.$remove().then(function(ref) {
+      // data has been deleted locally and in the database
+      console.log("Deleted spouse from Firebase: ",  ref.key());
+      $location.path('/dashboard');
+    }, function(error) {
+      console.log("Error:", error);
+    });
+  };
 }]);
