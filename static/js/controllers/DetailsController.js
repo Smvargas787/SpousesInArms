@@ -28,4 +28,15 @@ siaApp.controller('DetailsController', ["$scope", "$firebaseObject", "$firebaseA
       console.log("Error:", error);
     });
   };
+
+  //Updating Spouse
+  $scope.editSpouse = function(){
+    spouseData.$save().then(function(ref) {
+      ref.key() === spouseData.$id; // true
+      console.log("Updated spouse to Firebase: ",  ref.key());
+      $location.path('/dashboard');
+    }, function(error) {
+      console.log("Error:", error);
+    });
+  };
 }]);
